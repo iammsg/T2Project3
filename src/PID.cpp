@@ -1,3 +1,5 @@
+#include <vector>
+#include <cmath>
 #include "PID.h"
 
 /**
@@ -13,16 +15,15 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
    * Initialize PID coefficients and errors
    */
 
-  PID::Kp = Kp;
-  PID::Ki = Ki;
-  PID::Kd = Kd;
+  PID::Kp = Kp_;
+  PID::Ki = Ki_;
+  PID::Kd = Kd_;
 
   p_error = 0.0;
   i_error = 0.0;
   d_error = 0.0;
 
   prev_cte = 0.0;
-
 }
 
 void PID::UpdateError(double cte) {
@@ -40,7 +41,6 @@ void PID::UpdateError(double cte) {
   // Integral Error
   i_error += cte;
 
-  
 }
 
 double PID::TotalError() {

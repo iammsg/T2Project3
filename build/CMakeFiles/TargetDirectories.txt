@@ -1,0 +1,3 @@
+/home/msgeorge/Desktop/Udacity2018/T2Project3/build/CMakeFiles/rebuild_cache.dir
+/home/msgeorge/Desktop/Udacity2018/T2Project3/build/CMakeFiles/pid.dir
+/home/msgeorge/Desktop/Udacity2018/T2Project3/build/CMakeFiles/edit_cache.dir

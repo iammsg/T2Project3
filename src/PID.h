@@ -3,6 +3,7 @@
 
 class PID {
  public:
+
   /**
    * Constructor
    */
@@ -24,7 +25,6 @@ class PID {
    * Update the PID error variables given cross track error.
    * @param cte The current cross track error
    */
-
   void UpdateError(double cte);
 
   /**
@@ -32,6 +32,7 @@ class PID {
    * @output The total PID error
    */
   double TotalError();
+
 
  private:
   /**
@@ -52,6 +53,7 @@ class PID {
    * Custom Variables
    */
   double prev_cte;
+
 };
 
 #endif  // PID_H
