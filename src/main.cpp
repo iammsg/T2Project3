@@ -70,10 +70,10 @@ int main() {
           }
 
           // changing the throttle based upon the steering angle
-          if (std::abs(steer_value) > 0.3){
+          if (std::abs(steer_value) > 0.1){
             throttle = 0.25;
           } else {
-            throttle = 0.6;
+            throttle = 0.4;
           }
 
           // DEBUG
