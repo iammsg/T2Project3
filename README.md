@@ -15,7 +15,8 @@ A successful run will show that it is listening on the WebSocket port for the Ud
 
 #### Code Implementation
 Most of the code in this repository comes from translating the python code covered in the course to C++. In this particular scenario, the CTE was calculated from messages from the simulator. The code then calculates the error values for the PID and predicts the steering value based on these errors. This is done using the following formula:
-$$Steering Angle = -K_p * CTE - K_d * d/dt{CTE} - K_i * \Sigma{CTE}$$.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Steering&space;Angle&space;=&space;-K_p&space;*&space;CTE&space;-&space;K_d&space;*&space;\frac{\partial&space;CTE}{\partial&space;t}&space;-&space;K_i&space;*&space;\Sigma{CTE}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Steering&space;Angle&space;=&space;-K_p&space;*&space;CTE&space;-&space;K_d&space;*&space;\frac{\partial&space;CTE}{\partial&space;t}&space;-&space;K_i&space;*&space;\Sigma{CTE}" title="Steering Angle = -K_p * CTE - K_d * \frac{\partial CTE}{\partial t} - K_i * \Sigma{CTE}" /></a>
 
 In our implmentation, we also included logic to specify the throttle value. The logic is simple: use a low throttle value for high steering angles and a high throttle value for low steering angles. This was an intuitive step considering real life experience.
 
